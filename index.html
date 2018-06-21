@@ -1,1 +1,71 @@
-
+!DOCTYPE html>
+        <html>
+            <head>
+            <style>
+            
+            h1{
+                color: rgb(29, 26, 238);
+                font-family: cursive;
+                font-size: 50px;
+            }
+            
+            .bar{   
+                height: 20px; 
+                background: grey;
+                text-align: justify
+        
+            }
+            
+            
+            
+            
+            
+            </style>
+                <h1>Rolling dice</h1>
+            
+                <script>
+        
+                    var count =[0,0,0,0,0,0,0,0,0,0,0,0,0]
+                    for(var i= 1; i <=1000; i++)  {
+                        var die1 = Math.floor(Math.random()*6)+1;
+                        var die2 = Math.floor(Math.random()*6)+1;
+                        var sum = die1+die2;
+                        count[sum]++;
+                       
+                    }
+                     
+                      
+                  
+                     for(var sum = 2; sum <= 12; sum++) {
+                         var newLabel = document.createElement("div");
+                         newLabel.className ="label"
+                         var labelText = document.createTextNode(sum);
+                         newLabel.appendChild(labelText);
+                         document.body.appendChild(newLabel);
+                    
+        
+                    var newDiv = document.createElement("div");
+                    newDiv.className ="bar"
+                    newDiv.className = "bar"
+                    newDiv.style.width = count[sum] + "px"
+                    
+                    var textContent = document.createTextNode(count[sum]);
+                    newDiv.appendChild(textContent);
+                    document.body.appendChild(newDiv);
+        
+        
+                     }
+                     
+                  
+                
+                
+                </script>
+            </head>
+            <body>
+                
+            </body>
+        </html>
+        
+        
+        
+        
